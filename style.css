@@ -1,0 +1,111 @@
+*,
+*::after,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #02070d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container * {
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+}
+
+.clock {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 50px 25px;
+  border: 10px solid rgb(20, 26, 41);
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock img {
+  width: 320px;
+  height: 320px;
+  position: relative;
+}
+
+.hand {
+  position: absolute;
+  background-color: #fff;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 150px;
+  border-radius: 5px;
+  transform-origin: bottom;
+}
+
+.hour {
+  height: 60px;
+  width: 10px;
+  top: 100px;
+  background-color: #0084ff;
+}
+
+.min {
+  height: 80px;
+  width: 5px;
+  top: 80px;
+  background-color: #fbff00;
+}
+
+.second {
+  height: 90px;
+  width: 3px;
+  top: 70px;
+  background-color: #4e0181;
+}
+
+.shape1 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #ff5b84, #4e0181);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: 100px;
+  right: -100px;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #fae423, #fbff00);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  top: 100px;
+  left: -100px;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 80%;
+  }
+}
